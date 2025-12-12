@@ -9,7 +9,6 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* baad me /courses, /bootcamp, etc. yahan add kar sakti ho */}
       </Routes>
     </>
   );
