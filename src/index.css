@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@keyframes cert-marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes cert-marquee-right {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.cert-marquee-left {
+  animation: cert-marquee-left 18s linear infinite;
+  width: max-content;
+}
+
+.cert-marquee-right {
+  animation: cert-marquee-right 18s linear infinite;
+  width: max-content;
+}
