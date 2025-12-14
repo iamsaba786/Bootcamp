@@ -132,16 +132,16 @@ const WhatYoullStudy = () => {
     <section className="mx-auto px-5 py-2 md:px-15" data-scroll-section>
       {/* Heading */}
       <div className="text-center">
-        <h2 className="text-[2.5rem] font-semibold tracking-tight text-white md:text-[4.0rem]">
+        <h2 className="text-[2.5rem] mt-22 font-semibold tracking-tight text-white md:text-[4.0rem]">
           What You&apos;ll Study
         </h2>
-        <p className="mt-0 text-[20px] font-semibold text-[#6B6A6B] md:text-[46px]">
+        <p className="mt-2 text-[20px] font-lg text-[#6B6A6B] md:text-[40px]">
           Five Months Of Structured, Practical Engineering.
         </p>
       </div>
 
       {/* Accordion list */}
-      <div className="mt-10 space-y-1 bg-black/40">
+      <div className="mt-25 space-y-1 bg-black/40">
         {items.map((item, idx) => {
           const isOpen = openIndex === idx;
           return (

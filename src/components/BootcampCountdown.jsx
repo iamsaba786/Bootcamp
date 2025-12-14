@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 
 const BootcampCountdown = () => {
   const targetDate = new Date("2025-12-31T18:00:00+05:30").getTime();
@@ -44,53 +44,37 @@ const BootcampCountdown = () => {
   );
 };
 
-const TimeBlock = ({ number, label }) => (
+const TimeBlock = memo(({ number, label }) => (
   <div className="flex min-w-[4.2rem] flex-col items-center text-center max-sm:min-w-[3.6rem]">
     <div
-      className="
-        mb-1.5
-        font-[bwGrad-r]
-        font-black
-        text-white
-        leading-none
-        [font-size:clamp(36px,8vw,80px)]
-        sm:[font-size:clamp(44px,7vw,96px)]
-        [text-shadow:0_0_20px_rgba(255,255,255,0.3)]
-        transition-transform
-        duration-200
-      "
+      className="mb-1.5 font-[bwGrad-r] font-black text-white leading-none
+      [font-size:clamp(36px,8vw,80px)]
+      sm:[font-size:clamp(44px,7vw,96px)]
+      [text-shadow:0_0_20px_rgba(255,255,255,0.3)]
+      transition-transform duration-200"
     >
       {String(number).padStart(2, "0")}
     </div>
     <div
-      className="
-        text-[#888]
-        font-medium
-        tracking-[2px]
-        uppercase
-        [font-size:clamp(10px,2.5vw,14px)]
-        sm:[font-size:clamp(11px,1.5vw,16px)]
-      "
+      className="text-[#888] font-medium tracking-[2px] uppercase
+      [font-size:clamp(10px,2.5vw,14px)]
+      sm:[font-size:clamp(11px,1.5vw,16px)]"
     >
       {label}
     </div>
   </div>
-);
+));
 
-const Colon = () => (
+const Colon = memo(() => (
   <div
-    className="
-      mx-[8px]
-      font-light
-      text-white
-      [font-size:clamp(20px,6vw,40px)]
-      sm:[font-size:clamp(24px,4.5vw,56px)]
-      max-sm:mx-[4px]
-    "
+    className="mx-[8px] font-light text-white
+    [font-size:clamp(20px,6vw,40px)]
+    sm:[font-size:clamp(24px,4.5vw,56px)]
+    max-sm:mx-[4px]"
   >
     :
   </div>
-);
+));
 
 // helper
 function getTimeLeft(target) {

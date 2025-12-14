@@ -16,7 +16,7 @@ import ContactFormSection from "../components/ContactFormSection";
 import FAQSection from "../components/FAQSection";
 import Footer from "../components/Footer";
 import GrowthShowcase from "../components/GrowthShowcase";
-import ZLast from "../components/ZLast";
+import WhatsNew from "../components/WhatsNew";
 
 const HomePage = () => {
   return (
@@ -24,7 +24,7 @@ const HomePage = () => {
       <Hero />
       <IntroVideo />
       <Syllabus />
-      <ZLast />
+      <WhatsNew />
       <WhatYoullStudy />
       <RealExperience />
       <WhyBootcamp />

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 
 const IntroVideo = () => {
   return (
@@ -29,9 +29,9 @@ const IntroVideo = () => {
         </span>
       </h2>
 
-      {/* Glassy Request Callback button */}
+      {/* Button */}
       <button
-        className="relative text-white mt-10 inline-block shrink-0 rounded-full border-[0.4px] border-white/20 bg-black/20 px-10 py-3 text-sm md:mb-14 md:text-md"
+        className="relative mt-10 inline-block shrink-0 rounded-full border-[0.4px] border-white/20 bg-black/20 px-10 py-3 text-sm text-white md:mb-14 md:text-md"
         style={{
           boxShadow: "rgba(244, 244, 254, 0.25) 0px 4px 8px 0px inset",
         }}
@@ -42,4 +42,4 @@ const IntroVideo = () => {
   );
 };
 
-export default IntroVideo;
+export default memo(IntroVideo);
